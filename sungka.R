@@ -2,8 +2,8 @@ board  = c( 7, 7, 7, 7, 7, 7, 7, 0,
 	     	7, 7, 7, 7, 7, 7, 7, 0)			# Initialize board.
 
 # Note that board approximates reality.
-# 1   2   3   4   5   6   7   8 ---- Pepe's wells [1:7] and head at [8].
-# 9  10  11  12  13  14  15  16 ---- Pilar's wells [9:15] and head at [16].
+#  1   2   3   4   5   6   7  8 ---- Pepe's wells [1:7] and head at [8].
+# 16  15  14  13  12  11  10  9 ---- Pilar's wells [9:15] and head at [16].
 
 # Does not incorporate strategy of any kind, so Pepe and Pilar choose wells at random.
 
