@@ -1,30 +1,31 @@
 board  = c( 7, 7, 7, 7, 7, 7, 7, 0,
-	     	7, 7, 7, 7, 7, 7, 7, 0)			# Initialize board.
-par(mfrow=c(2,2))
+	     	7, 7, 7, 7, 7, 7, 7, 0)			# Initialize board.  Pepe's head at [8], Pilar's at [16].
+
+par(mfrow=c(2,2))							# Plot turns to visualize.
 plot(board, ylim = c(-1, 60), pch = 15)
 
-dropsp = rep(F, 16)
+dropsp = rep(F, 16)							# Initialize vectors to follow drops.
 dropsr = rep(F, 16)
 
-if (T) {
-	pepe = T
-	pilar = F
-	housep = sample(1:7, 1)
-	shellsp = board[housep]
+if (sample(c(T,F), 1)) {					# Pepe and Pilar flip a coin to start.
+	pepe = T									# Pepe and Pilar are the prototypical kids in...
+	pilar = F									# ...Filipino kiddie literature.
+	
+	housep = sample(1:7, 1)					# Pepe starts if he wins flip, ...
+	shellsp = board[housep]					# ...and picks up shells.
 	board[housep] = 0
 	shellsr = 0
-} else {
+	
+} else {									# Pilar starts if she wins flip.
 	pepe = F
 	pilar = T
 	houser = sample(9:15, 1)
 	shellsr = board[houser]
 	board[houser] = 0
-	shellsr = 0
+	shellsp = 0
 }
-print(paste(pepe, housep, shellsp, pilar, houser, shellsr))
-print(board)
-while (pepe | pilar) {
 
+while (pepe | pilar) {						# Pepe and Pilar take turns according to sungka.
 
 if (pilar) {
 while (shellsr > 0) {
