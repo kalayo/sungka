@@ -1,3 +1,7 @@
+# A simple simulation of one-round sungka.
+# Amadeo B. Biter
+# October 28, 2014
+
 board  = c( 7, 7, 7, 7, 7, 7, 7, 0,
 	     	7, 7, 7, 7, 7, 7, 7, 0)			# Initialize board.
 
