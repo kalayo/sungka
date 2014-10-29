@@ -256,5 +256,6 @@ if (stopp == 8) {
 	}
 }
 }
-print(board)								# Print board as game progresses.
+print(board[1:8])								# Print board as game progresses.
+print(board[16:9])
 }
